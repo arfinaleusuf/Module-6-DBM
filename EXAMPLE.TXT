@@ -2,6 +2,8 @@
 2. HIGHEST SALARY KE PAY?
 3. MARKETING DEPT E KE KE KAJ KORE?
 4. MARKETING E KAJ KORE ERDER AGARAGE SALARY KOTO?
+5. IT DEPT E KOYJON EMPLOYEE ACHE?
+
 
 ANS: 1
     SELECT *
@@ -31,3 +33,11 @@ ANS: 4
 	    					FROM DEPARTMENTS
                             WHERE DEPARTMENT_NAME = 'MARKETING'
                             );
+
+ANS: 5
+    SELECT COUNT(*) AS MEMBERS
+    FROM EMPLOYEES
+    WHERE DEPARTMENT_ID = (SELECT DEPARTMENT_ID
+	    					FROM DEPARTMENTS
+                            WHERE DEPARTMENT_NAME = 'IT'
+                            );                            

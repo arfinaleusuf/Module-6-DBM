@@ -1,0 +1,6 @@
+Query er moddhe Query
+
+example:
+        SELECT *
+        FROM Employee
+        WHERE sallary > 50000

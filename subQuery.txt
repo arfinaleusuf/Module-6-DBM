@@ -4,3 +4,10 @@ example:
         SELECT *
         FROM Employee
         WHERE sallary > 50000
+
+        DYNAMIC:
+        SELECT *
+        FROM EMPLOYEES
+        WHERE SALARY < (SELECT SALARY
+				FROM EMPLOYEES
+				WHERE EMPLOYEE_ID = 144);
